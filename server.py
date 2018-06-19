@@ -15,7 +15,7 @@ def status():
 
 @app.route('/on')
 def on():
-    command = '/home/pi/pihat --brand=5 --id=' + get_device() + ' --channel=7 --state=1'
+    command = '/home/pi/pihat/pihat --brand=5 --id=' + get_device() + ' --channel=7 --state=1'
     print command
     os.system(command)
     update_status('on')
@@ -23,7 +23,7 @@ def on():
 
 @app.route('/off')
 def off():
-    command = '/home/pi/pihat --brand=5 --id=' + get_device() + ' --channel=6 --state=1'
+    command = '/home/pi/pihat/pihat --brand=5 --id=' + get_device() + ' --channel=6 --state=1'
     print command
     os.system(command)
     update_status('off')
