@@ -69,4 +69,4 @@ def get_command(device, status):
     return '/home/pi/pihat/pihat --brand=5 --id=' + device + ' --channel=' + channel + ' --state=1'
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3100)
+    app.run(host='0.0.0.0', port=3100, threaded=True)
